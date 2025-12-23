@@ -1,0 +1,119 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  color: var(--white);
+}
+
+.header.scrolled {
+  background-color: rgba(28, 25, 23, 0.95); /* Stone-900 com opacidade */
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+.header.scrolled .brandName,
+.header.scrolled .navLink {
+  color: var(--amber-500);
+}
+
+.navWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoCircle {
+  width: 48px;
+  height: 48px;
+  background-color: var(--amber-500);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--amber-300);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brandName {
+  font-family: var(--font-serif);
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: inherit;
+}
+
+/* Desktop Nav */
+.desktopNav {
+  display: none;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .desktopNav {
+    display: flex;
+  }
+}
+
+.navLink {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  color: inherit;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: var(--amber-500);
+}
+
+/* Mobile */
+.mobileToggle {
+  display: block;
+  color: var(--amber-500);
+}
+
+@media (min-width: 768px) {
+  .mobileToggle {
+    display: none;
+  }
+}
+
+.mobileNav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--stone-900);
+  border-top: 1px solid var(--stone-800);
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileNavLink {
+  padding: 1rem;
+  text-align: left;
+  color: var(--white);
+  border-bottom: 1px solid var(--stone-800);
+}
+
+.mobileNavLink:hover {
+  color: var(--amber-500);
+}

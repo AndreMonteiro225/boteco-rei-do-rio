@@ -1,0 +1,126 @@
+.footer {
+  background-color: var(--stone-950);
+  color: var(--stone-300);
+  padding: 4rem 0 2rem;
+  border-top: 1px solid var(--stone-900);
+  font-size: 0.875rem;
+}
+
+.grid {
+  display: grid;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+/* Coluna Marca */
+.brandColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.logoHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logoCircle {
+  width: 32px;
+  height: 32px;
+  background-color: var(--amber-500);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--amber-300);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brandName {
+  font-family: var(--font-serif);
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: var(--white);
+}
+
+.aboutText {
+  max-width: 350px;
+  line-height: 1.6;
+}
+
+/* Colunas Padrão */
+.columnTitle {
+  color: var(--white);
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--stone-900);
+  padding-bottom: 0.5rem;
+}
+
+.highlight {
+  color: var(--amber-500);
+  font-weight: 600;
+}
+
+.linkButton {
+  color: var(--stone-400);
+  transition: color 0.2s;
+  text-align: left;
+}
+
+.linkButton:hover {
+  color: var(--amber-500);
+}
+
+/* Bottom Bar */
+.bottomBar {
+  border-top: 1px solid var(--stone-900);
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .bottomBar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.legalLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.legalLink:hover {
+  color: var(--white);
+}

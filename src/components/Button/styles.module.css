@@ -1,0 +1,49 @@
+.base {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  font-size: 1rem;
+}
+
+.base:active {
+  transform: translateY(1px);
+}
+
+/* Variante Primária (Amarelo) */
+.primary {
+  background-color: var(--amber-500);
+  color: var(--stone-900);
+  border-bottom: 4px solid var(--amber-700);
+}
+
+.primary:hover {
+  background-color: var(--amber-600);
+  transform: translateY(-2px);
+}
+
+/* Variante Outline (Borda) */
+.outline {
+  background-color: transparent;
+  border: 2px solid var(--amber-600);
+  color: var(--amber-700);
+}
+
+.outline:hover {
+  background-color: var(--amber-50);
+}
+
+/* Variante Secondary (Escuro) */
+.secondary {
+  background-color: var(--stone-800);
+  color: var(--amber-500);
+  border: 1px solid var(--stone-700);
+}
+
+.secondary:hover {
+  background-color: var(--stone-700);
+}

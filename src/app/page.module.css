@@ -1,0 +1,179 @@
+/* Estilos específicos da página principal */
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitleWrapper {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--stone-800);
+}
+
+.divider {
+  width: 6rem;
+  height: 0.25rem;
+  background-color: var(--amber-500);
+  margin: 1rem auto;
+  border-radius: 99px;
+}
+
+.sectionSubtitle {
+  color: var(--stone-500);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Espaço Section */
+.spaceSection {
+  padding: 5rem 0;
+  background-color: var(--stone-900);
+  color: var(--white);
+}
+
+.spaceContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .spaceContent {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.tagline {
+  color: var(--amber-500);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.spaceText h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.featureList {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.featureList li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.featureList li::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--amber-500);
+  border-radius: 50%;
+}
+
+.galleryGrid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.galleryPlaceholder {
+  background-color: var(--stone-800);
+  height: 300px;
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+}
+
+/* Contato Section */
+.contactSection {
+  padding: 5rem 0;
+  background-color: var(--white);
+}
+
+.contactGrid {
+  display: grid;
+  gap: 3rem;
+  background-color: var(--stone-50);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--stone-200);
+}
+
+@media (min-width: 768px) {
+  .contactGrid {
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem;
+  }
+}
+
+.addressBlock {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.iconBox {
+  padding: 0.75rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.greenIcon {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.mapBlock {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.mapPlaceholder {
+  background-color: var(--stone-200);
+  flex-grow: 1;
+  border-radius: var(--radius);
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--stone-500);
+}
+
+.mapIcon {
+  width: 32px;
+  height: 32px;
+  color: #dc2626;
+  margin-bottom: 0.5rem;
+}
