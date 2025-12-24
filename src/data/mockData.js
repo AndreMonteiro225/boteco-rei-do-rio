@@ -5,7 +5,7 @@ export const HERO_IMAGE_URL = "/hero_rei_rio.png";
 export const heroSlides = [
   {
     id: 1,
-    image: HERO_IMAGE_URL,
+    image: "/hero3_rei_rio.png",
     title: "O Verdadeiro Sabor Carioca",
     subtitle: "Tradição, cerveja gelada e a melhor comida de boteco da região.",
     alt: "Interior do Boteco Rei do Rio"

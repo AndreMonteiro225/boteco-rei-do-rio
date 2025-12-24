@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Button from '@/components/Button'; // Importação do componente Button
 import { heroSlides } from '@/data/mockData';
 import styles from './styles.module.css';
 
@@ -18,6 +19,11 @@ export default function Hero() {
   const nextSlide = () => setCurrentSlide(curr => curr === heroSlides.length - 1 ? 0 : curr + 1);
   const prevSlide = () => setCurrentSlide(curr => curr === 0 ? heroSlides.length - 1 : curr - 1);
 
+  const scrollToMenu = () => {
+    const element = document.getElementById('cardapio');
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section id="hero" className={styles.heroSection}>
       {heroSlides.map((slide, index) => (
@@ -33,7 +39,12 @@ export default function Hero() {
              <h1 className={styles.title}>{slide.title}</h1>
              <p className={styles.subtitle}>{slide.subtitle}</p>
              <div className={styles.actions}>
-                <button className={styles.btnPrimary}>Ver Cardápio</button>
+                <Button 
+                  onClick={scrollToMenu} 
+                  className={styles.heroBtn}
+                >
+                  Ver Cardápio
+                </Button>
              </div>
           </div>
         </div>

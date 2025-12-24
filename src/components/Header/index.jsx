@@ -1,8 +1,8 @@
-'use client'; // Necessário pois usa hooks (useState, useEffect)
+'use client'; 
 
 import { useState, useEffect } from 'react';
 import { Menu as MenuIcon, X } from 'lucide-react';
-import { LOGO_URL } from '../../data/mockData';
+import { LOGO_URL } from '@/data/mockData'; // Refatorado para usar @
 import styles from './styles.module.css';
 
 export default function Header() {
@@ -26,7 +26,6 @@ export default function Header() {
       <div className="container">
         <div className={styles.navWrapper}>
           
-          {/* Logo */}
           <div className={styles.logoArea}>
             <div className={styles.logoCircle}>
               <img src={LOGO_URL} alt="Logo" className={styles.logoImg} />
@@ -34,16 +33,14 @@ export default function Header() {
             <span className={styles.brandName}>Boteco Rei do Rio</span>
           </div>
 
-          {/* Desktop Nav */}
           <nav className={styles.desktopNav}>
-            {['hero', 'cardapio', 'espaco', 'contato'].map((id) => (
+            {['inicio', 'cardapio', 'espaco', 'contato'].map((id) => (
               <button key={id} onClick={() => scrollTo(id)} className={styles.navLink}>
                 {id.charAt(0).toUpperCase() + id.slice(1)}
               </button>
             ))}
           </nav>
 
-          {/* Mobile Toggle */}
           <button 
             className={styles.mobileToggle}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -53,10 +50,9 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <nav className={styles.mobileNav}>
-          {['hero', 'cardapio', 'espaco', 'contato'].map((id) => (
+          {['inicio', 'cardapio', 'espaco', 'contato'].map((id) => (
             <button key={id} onClick={() => scrollTo(id)} className={styles.mobileNavLink}>
                {id.charAt(0).toUpperCase() + id.slice(1)}
             </button>

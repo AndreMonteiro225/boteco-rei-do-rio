@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { ChefHat, Beer, ChevronRight } from 'lucide-react';
-import { menuItems } from '../../data/mockData.js';
+import { menuItems } from '@/data/mockData'; // Refatorado para usar @
 import styles from './styles.module.css';
 
 export default function Menu() {
